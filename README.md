@@ -2,9 +2,8 @@
 Script for the paper on HMM and HSMM
 
 
-**********************************************************************
-   Relationship between notation in mathematical equations and in R code
- **********************************************************************
+# Relationship between notation in mathematical equations and in R code
+ 
    Equation          | R
    =================================
    tau (coef AR1)    | mu (coef AR1)
