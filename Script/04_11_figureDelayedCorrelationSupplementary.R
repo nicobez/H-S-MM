@@ -56,7 +56,7 @@ for(i.var in 1:2){
     }
   }
 }
-par(def.par)
+par(defPar)
 
 # Cleaning
 rm(i.degrad,m,i.var,i.state,i.vessel,gps.deg,x1,x2,traj,sel)
