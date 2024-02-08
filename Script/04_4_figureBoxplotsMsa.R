@@ -11,15 +11,11 @@ var.names <- c(TeX("$E[v_{1,1}]$"),TeX("$\\sigma[v_{1,1}]$"),TeX("$\\tau_{1,1}$"
                TeX("$E[T_{2}]$"),TeX("$\\sigma[T_{2}]$"))
 
 ################## y-axis is common to all the degradation for a given vessel, variable, state and statistic
-layout(matrix(1+c(0,rep(1,4),rep(2,4),2+(1:(16*9))),1+16,9,byrow = TRUE),widths=c(1,2,rep(1.5,3),2,rep(1.5,3)))
-#layout.show(3+16*9)
+layout(matrix(1+c(0,rep(1,4),rep(2,4),2+(1:(17*9))),1+17,9,byrow = TRUE),widths=c(1,2,rep(1.5,3),2,rep(1.5,3)))
+#layout.show(3+17*9)
 
 par(mar=rep(0.02,4))
 plot(c(0.5,3),c(0,1),type="n",xaxt="n",yaxt="n")
-text(1.0,0.5,"HMM-AR0",srt=90,cex=0.75)
-text(1.5,0.5,"HMM-AR1",srt=90,cex=0.75)
-text(2.0,0.5,"HSMM-AR0",srt=90,cex=0.75)
-text(2.5,0.5,"HSMM-AR1",srt=90,cex=0.75)
 
 plot(c(0,1),c(0,1),type="n",xaxt="n",yaxt="n")
 text(0.5,0.65,"Settings 1",col=vesselCol[1])
@@ -88,6 +84,17 @@ for(i.var in 1:3){
     }
   }
 }
+plot(c(0.5,3),c(0,1),type="n",xaxt="n",yaxt="n")
+for(iVessel in 1:2){
+  for(i in 1:4){
+    plot(c(ifelse(i==1,-0.5,0.5),3),c(0,1),type="n",xaxt="n",yaxt="n",xaxs="i")
+    text(1.0,0.5,"HMM-AR0",srt=90,cex=0.75,col=vesselCol[iVessel])
+    text(1.5,0.5,"HMM-AR1",srt=90,cex=0.75,col=vesselCol[iVessel])
+    text(2.0,0.5,"HSMM-AR0",srt=90,cex=0.75,col=vesselCol[iVessel])
+    text(2.5,0.5,"HSMM-AR1",srt=90,cex=0.75,col=vesselCol[iVessel])
+  }
+}
+
 
 dev.print(device = png, file = "Result/boxplotMsa250MixingDegradation.png",width=21*20,height=29.7*20)
 dev.print(device = postscript, file = "Result/boxplotMsa250MixingDegradation.eps",width=450,height=600,horizontal = FALSE)
