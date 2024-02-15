@@ -1,5 +1,4 @@
-# H-S-MM
-Scripts for reproducing all the figures in the paper on HMM and HSMM
+# Scripts for reproducing all the figures of the paper on HMM and HSMM
 
 The outputs of the MSA and the MRA experiments are first loaded and used for analyses and figures.
 
