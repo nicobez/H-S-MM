@@ -107,10 +107,16 @@ for(i in 1:expDesignSize){
         temp1[i.simu,i.vessel,i.degrad,i.othermethod,i.AR,,] <- res.AS.EM.Q.temp$confusion.ML 
       }
       #
-      temp0 <- paste0("ResultatsMPI_MSA-nbinom.",i.vessel,".",i.method,".",i.AR,".",i.degrad,"_exp",i,"_simu",i.simu,".RData")
-      if(temp0 %in% get(paste0("listNomMsa",i.length))){
+      if(i.length==250){
+        temp0 <- paste0("ResultatsR_MSA-nbinom.",i.vessel,".",i.method,".",i.AR,".",i.degrad,".exp.",i,".simu.",i.simu,".RData")
         load(file=paste(get(paste0("pathMsa",i.length)),temp0,sep="/"))
-        temp1[i.simu,i.vessel,i.degrad,i.method,i.AR,,] <- res.AS.EM.Q.temp$confusion.ML 
+        temp1[i.simu,i.vessel,i.degrad,i.method,i.AR,,] <- res$confusion.ML 
+      } else {
+        temp0 <- paste0("ResultatsMPI_MSA-nbinom.",i.vessel,".",i.method,".",i.AR,".",i.degrad,"_exp",i,"_simu",i.simu,".RData")
+        if(temp0 %in% get(paste0("listNomMsa",i.length))){
+          load(file=paste(get(paste0("pathMsa",i.length)),temp0,sep="/"))
+          temp1[i.simu,i.vessel,i.degrad,i.method,i.AR,,] <- res.AS.EM.Q.temp$confusion.ML 
+        }
       }
       #
       assign(paste0("confusion",i.length,method,AR),temp1)
