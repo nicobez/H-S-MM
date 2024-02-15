@@ -1,6 +1,12 @@
 # H-S-MM
-Script for the paper on HMM and HSMM
+Scripts for reproducing all the figures in the paper on HMM and HSMM
+The outputs of the MSA and the MRA experiments are first loaded and used for analyses and figures.
+MSA = Model Skill Assessement, i.e. estimation model = simulation model
+MRA = Model Robustness Assessment, i.e. estimation != simulation model
 
+MSA can be reproduced from 
+
+MRA was done with a remote supercalculator and have been stored.
 
 # Relationship between notation in mathematical equations and in R code
  
