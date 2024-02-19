@@ -1,5 +1,7 @@
 # Scripts for reproducing all the figures of the paper on HMM and HSMM
 
+https://doi.org/10.5281/zenodo.10679448
+
 The outputs of the MSA and the MRA experiments are first loaded and used for analyses and figures.
 
 MSA = Model Skill Assessement, i.e. estimation model = simulation model
