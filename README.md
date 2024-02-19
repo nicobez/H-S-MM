@@ -8,7 +8,7 @@ MSA = Model Skill Assessement, i.e. estimation model = simulation model
 
 MRA = Model Robustness Assessment, i.e. estimation != simulation model
 
-Experiments for MSA can be reproduced from (https://github.com/nicobez/H-S-MM_MSA). However, the outputs have been stored in the Data directory to enable direct analyses. 
+Experiments for MSA can be reproduced from (https://github.com/nicobez/H-S-MM_MSA ; https://doi.org/10.5281/zenodo.10678877). However, the outputs have been stored in the Data directory to enable direct analyses. 
 
 Experiments for MRA was done with a remote supercalculator and have been stored in the Data directory to enable direct analyses.
 
